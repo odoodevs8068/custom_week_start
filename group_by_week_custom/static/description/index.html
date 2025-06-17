@@ -1,0 +1,208 @@
+<!-- Google Fonts & Bootstrap -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container py-5">
+  <!-- ⚠️ Enterprise‑only Banner -->
+  <div class="alert alert-warning text-center mb-4" style="font-size:1.1rem;font-family:'Poppins',sans-serif;background:#fff3cd;border:1px solid #ffeeba;border-radius:10px;color:#856404;">
+    ⚠️ <strong>Important:</strong> This module is intended exclusively for <u>Odoo Enterprise</u> 15 And Community.
+  </div>
+
+  <!-- Hero -->
+  <section class="text-center mb-5" style="background:linear-gradient(135deg,#7f5af0,#2cb67d);border-radius:20px;padding:80px 20px;">
+    <h1 style="font-family:'Poppins',sans-serif;font-weight:700;color:#fff;font-size:3rem;">Custom Week Group‑By (Sun–Sat)</h1>
+    <p style="font-family:'Poppins',sans-serif;color:#f0f0f0;font-size:1.2rem;margin-top:20px;">Align Odoo’s “Group By › Week” with the Sunday‑to‑Saturday business calendar</p>
+
+  </section>
+
+  <!-- Quick Links -->
+  <section class="row text-center mb-5">
+    <div class="col-md-4 mb-4">
+      <a href="#overview" class="text-decoration-none">
+        <div class="card h-100 shadow-sm border-0" style="border-radius:15px;">
+          <div class="card-body">
+            <h5 class="card-title" style="font-family:'Poppins',sans-serif;color:#7f5af0;">Overview</h5>
+            <p class="card-text text-muted">Why this patch matters</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 mb-4">
+      <a href="#features" class="text-decoration-none">
+        <div class="card h-100 shadow-sm border-0" style="border-radius:15px;">
+          <div class="card-body">
+            <h5 class="card-title" style="font-family:'Poppins',sans-serif;color:#2cb67d;">Features</h5>
+            <p class="card-text text-muted">What you get</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 mb-4">
+      <a href="#configuration" class="text-decoration-none">
+        <div class="card h-100 shadow-sm border-0" style="border-radius:15px;">
+          <div class="card-body">
+            <h5 class="card-title" style="font-family:'Poppins',sans-serif;color:#ff8906;">Configuration</h5>
+            <p class="card-text text-muted">How to enable</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section id="overview" class="mb-5">
+    <h2 class="text-center mb-4" style="font-family:'Poppins',sans-serif;color:#222;">Overview</h2>
+    <p class="text-center text-muted">
+      Odoo’s built‑in “Week” grouping starts its week on <em>Monday</em>.
+      For many businesses, financial and operational reports need to follow the <strong>Sunday–Saturday</strong> calendar instead.<br><br>
+      This lightweight patch adjusts the underlying <code>group_by=week</code> algorithm, so list, kanban and pivot views instantly reflect your preferred week definition—<u>no extra clicks, wizards, or custom fields</u>.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="mb-5">
+    <h2 class="text-center mb-4" style="font-family:'Poppins',sans-serif;color:#222;">Key Features &amp; Benefits</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="text-muted">
+          <li>✅ Sunday–Saturday week logic in all views</li>
+          <li>✅ Correct ISO‑style display (<code>'W'w yyyy</code>)</li>
+          <li>✅ Time‑zone aware for date‑time fields</li>
+          <li>✅ Zero impact on existing data or workflows</li>
+          <li>✅ Fully ORM‑safe; follows Odoo patching guidelines</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="text-muted">
+          <li>✅ Enable <u>globally</u> or per <u>specific models</u></li>
+          <li>✅ Works on  Enterprise edition 15</li>
+          <li>✅ Compatible with multi‑company setups</li>
+          <li>✅ Minimal footprint – no extra menus</li>
+          <li>✅ Ideal for US, GCC &amp; retail fiscal calendars</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Configuration -->
+  <section id="configuration" class="mb-5">
+    <h2 class="text-center mb-4" style="font-family:'Poppins',sans-serif;color:#222;">Configuration</h2>
+    <div class="row text-muted">
+      <div class="col-md-6 mb-3">
+        <h5 style="font-family:'Poppins',sans-serif;color:#2cb67d;">Option A – Global</h5>
+        <p>Activate the <strong>“Set Globally”</strong> toggle in&nbsp;<em>Settings › Technical › Parameters</em>. Every model that supports <code>group_by=week</code> now uses the Sun‑Sat calendar.</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5 style="font-family:'Poppins',sans-serif;color:#7f5af0;">Option B – Per Model</h5>
+        <p>Select one or more models (e.g.&nbsp;<em>account.move</em>, <em>sale.order</em>) in the provided list. Only those models adopt the new week logic; others remain unchanged.</p>
+      </div>
+    </div>
+    <p class="text-center small text-muted">Changes take effect immediately — just refresh your browser tab.</p>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="mb-5">
+    <h2 class="text-center mb-4" style="font-family:'Poppins',sans-serif;color:#222;">Screenshots</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <img src="assets/screenshots/a1.png" >
+      </div>
+    </div>
+  </section>
+
+  <!-- Services (optional marketing) -->
+  <section class="text-center my-5">
+    <h2 style="font-family:'Poppins',sans-serif;color:#222;">Our Odoo Services</h2>
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/cogs.png" width="48" height="48" class="mx-auto mb-3">
+          <h6 style="font-family:'Poppins',sans-serif;">Customization</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/wrench.png" width="48" height="48" class="mx-auto mb-3">
+          <h6 style="font-family:'Poppins',sans-serif;">Implementation</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/lifebuoy.png" width="48" height="48" class="mx-auto mb-3">
+          <h6 style="font-family:'Poppins',sans-serif;">Support</h6>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm border-0 p-4" style="border-radius:15px;">
+          <img src="assets/icons/puzzle.png" width="48" height="48" class="mx-auto mb-3">
+          <h6 style="font-family:'Poppins',sans-serif;">Integration</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="text-center my-5">
+    <h2 style="font-family:'Poppins',sans-serif;color:#222;">Related Products</h2>
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/15.0/widget_one2many_search_select" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/br.png" class="card-img-top" alt="Bank Statement Revert Reconciliation">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Bank Statement Revert Reconciliation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/16.0/hotel_reservation_dashboard" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/hb.gif" class="card-img-top" alt="Hotel Dashboard">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Hotel Reservation Dashboard</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/15.0/print_wizard" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/bdr.png" class="card-img-top" alt="Big Data Reports">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Big Data Reports</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <a href="https://apps.odoo.com/apps/modules/17.0/message_gateway" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm" style="border-radius:10px;">
+            <img src="./assets/screenshots/mssge_gty.gif" class="card-img-top" alt="Big Data Reports">
+            <div class="card-body">
+              <p class="card-title font-weight-bold mb-0">Message Getway(Twilio,Nexmo,Clicksendsms)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="text-center my-5">
+    <h2 style="font-family:'Poppins',sans-serif;color:#222;">Need Help?</h2>
+    <div class="d-flex flex-column align-items-center mt-4">
+      <a href="mailto:odoodevs8068@gmail.com" class="btn btn-dark mb-2" style="width:250px;">
+        <i class="fa fa-envelope mr-2"></i>Email Us
+      </a>
+      <a href="https://wa.me/966542273082" class="btn btn-success mb-2" style="width:250px;">
+        <i class="fa fa-whatsapp mr-2"></i>WhatsApp (KSA) 966 54227 3082
+      </a>
+      <a href="https://wa.me/919360353170" class="btn btn-success" style="width:250px;">
+        <i class="fa fa-whatsapp mr-2"></i>WhatsApp (India) 91 9360353170
+      </a>
+    </div>
+  </section>
+</div>
